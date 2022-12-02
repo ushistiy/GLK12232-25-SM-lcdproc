@@ -9,7 +9,7 @@ Put patches to directory /etc/portage/app-misc/lcdproc/
 
 And run
 
-###### emerge lcdproc
+emerge lcdproc
 
 #### Upload font to display:
 
