@@ -12,7 +12,7 @@ And run
 ```
 emerge lcdproc
 ```
-#### Upload font to display:
+#### Upload font and bitmap to display:
 
 ```
 Use https://www.matrixorbital.com/graphic-software
