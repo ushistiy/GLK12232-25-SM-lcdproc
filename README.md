@@ -3,7 +3,7 @@ Matrix Orbital LCD GLK12232-25-SM with patches for lcdproc on Infoblox-1050-A.
 
 Русская кириллица ASCII Windows 1251.
 
-#### Build lcdproc:
+#### Build lcdproc on Gentoo:
 
 Put patches to directory /etc/portage/app-misc/lcdproc/
 
