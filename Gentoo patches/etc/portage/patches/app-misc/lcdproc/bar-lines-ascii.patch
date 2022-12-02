@@ -1,0 +1,86 @@
+--- /server/drivers/glk.c	2021-12-20 23:19:25.000000000 +0300
++++ /server/drivers/glk.c	2022-12-02 22:13:06.000000000 +0300
+@@ -475,7 +475,7 @@
+ 		glkputl(p->fd, GLKCommand, 0x31, 1, EOF);
+ 		p->fontselected = 1;
+ 		/* Set font metrics */
+-		glkputl(p->fd, GLKCommand, 0x32, 0, 0, 0, 1, p->height, EOF);
++		glkputl(p->fd, GLKCommand, 0x32, 0, 0, 0, 1, p->height, EOF);
+ 		/* Clear the screen */
+ 		glk_clear_forced(drvthis);
+ 	}
+@@ -486,10 +486,10 @@
+ 		myc = p->CGRAM[myc & 7];
+ 	} else if ((myc == 255) || (myc == -1)) {
+ 		/* Solid block */
+-		myc = 133;
++		myc = 128;
+ 	} else if (((myc > 15) && (myc < 32)) || (myc > 143)) {
+ 		debug(RPT_DEBUG, "Attempt to write %d to (%d,%d)", myc, x, y);
+-		myc = 133;
++		myc = 128;
+ 	}
+ 
+ 	if ((x >= 0) && (y >= 0) && (x < p->width) && (y < p->height))
+@@ -647,13 +647,14 @@
+ 
+ 		switch (pixels) {
+ 			case 0 :  return;	/* Don't output a char */
+-			case 1 :  lastc = 138; break;  /* One bar */
+-			case 2 :  lastc = 139; break;
+-			case 3 :  lastc = 140; break;
+-			case 4 :  lastc = 141; break;
+-			case 5 :  lastc = 142; break;
+-			case 6 :  lastc = 143; break;
+-			default:  lastc = 133; break;
++			case 1 :  lastc = 157; break;  /* One bar */
++			case 2 :  lastc = 158; break;
++			case 3 :  lastc = 159; break;
++			case 4 :  lastc = 161; break;
++			case 5 :  lastc = 162; break;
++			case 6 :  lastc = 163; break;
++			case 7 :  lastc = 188; break;
++			default:  lastc = 128; break;
+ 		}
+ 		glk_chr(drvthis, x, y, lastc);
+ 	}
+@@ -682,11 +683,13 @@
+ 
+ 		switch (pixels) {
+ 			case 0 :  lastc = ' '; break;
+-			case 1 :  lastc = 134; break;  /* One bar */
+-			case 2 :  lastc = 135; break;
+-			case 3 :  lastc = 136; break;
+-			case 4 :  lastc = 137; break;
+-			default:  lastc = 133; break;
++			case 1 :  lastc = 129; break;  /* One bar */
++			case 2 :  lastc = 131; break;
++			case 3 :  lastc = 141; break;
++			case 4 :  lastc = 142; break;
++			case 5 :  lastc = 143; break;
++			case 6 :  lastc = 144; break;
++			default:  lastc = 128; break;
+ 		}
+ 		glk_chr(drvthis, x, y, lastc);
+ 	}
+@@ -703,16 +706,16 @@
+ 
+     switch (icon) {
+       case ICON_BLOCK_FILLED:
+-	glk_chr(drvthis, x, y, 255);
++	glk_chr(drvthis, x, y, 189);
+ 	break;
+       case ICON_HEART_FILLED:
+-	glk_chr(drvthis, x, y, 132);
++	glk_chr(drvthis, x, y, 135);
+ 	break;
+       case ICON_HEART_OPEN:
+-	glk_chr(drvthis, x, y, 131);
++	glk_chr(drvthis, x, y, 134);
+ 	break;
+       case ICON_ELLIPSIS:
+-	glk_chr(drvthis, x, y, 128);
++	glk_chr(drvthis, x, y, 133);
+ 	break;
+       default:
+ 	return -1;		/* Let the core do the others */
