@@ -3,14 +3,14 @@ LCD GLK12232-25-SM with lcdproc patches on Gentoo.
 
 Русская кириллица ASCII Windows 1251.
 
-###### Build:
+#### Build:
 
-Place patches to /etc/portage/app-misc/lcdproc/
+Put patches to directory /etc/portage/app-misc/lcdproc/
 
 And run
 
-emerge lcdproc
+###### emerge lcdproc
 
-###### Upload font to display:
+#### Upload font to display:
 
 Use https://www.matrixorbital.com/graphic-software
