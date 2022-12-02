@@ -1,5 +1,5 @@
 # GLK12232-25-SM-lcdproc
-Matrix Orbital LCD GLK12232-25-SM with patches for lcdproc on Infoblox-1050-A and Gentoo.
+Matrix Orbital LCD GLK12232-25-SM with patches for lcdproc on Infoblox-1050-A.
 
 Русская кириллица ASCII Windows 1251.
 
