@@ -10,10 +10,10 @@ Put patches to directory /etc/portage/app-misc/lcdproc/
 And run
 
 ```
-# emerge lcdproc
+emerge lcdproc
 ```
 #### Upload font to display:
 
 ```
-# Use https://www.matrixorbital.com/graphic-software
+Use https://www.matrixorbital.com/graphic-software
 ```
