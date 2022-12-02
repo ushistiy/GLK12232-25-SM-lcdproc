@@ -1,0 +1,51 @@
+Описание формата файла MGF | Matrix Orbital MGF File Format
+
+      dec  hex 
+Byte  0    00    = количество символов в названии шрифта
+bytes 1-20 01-14 = название шрифта, максимум 20 символов
+
+byte  21   15    = высота символа
+byte  22   16    = ширина символа
+byte  23   17    = первый ASCII символ
+byte  24   18    = последнй ASCII символ
+
+
+Шрифт SmallFilled Russian
+     hex
+byte 00    = 13 ( 19 символов в названии шрифта (dec to hex ) )
+byte 01-14 = 536D616C6C46696C6C6564205275737369616E00 ( SmallFilled Russian. )
+byte 15    = 07 ( высота символа )
+byte 16    = 06 ( ширина символа )
+byte 17    = 20 ( первый ASCII символ  32 )
+byte 18    = FF ( последнй ASCII символ 255 )
+
+
+Для корректной работы lcdproc с дисплеем GLK12232-25-SM примените bar-lines-ascii.patch драйвера glk 
+Шрифт SmallFilled Russian создан в соответствии с ASCII Windows 1251, но имеет незначительные отличия...
+
+Вместо стандартных символов в шрифте:
+
+закрашенный полностью блок
+128 - solid block
+
+блоки для отрисовки горизонтальной шкалы
+129 - solid block
+131 - solid block
+141 - solid block
+142 - solid block
+143 - solid block
+144 - solid block
+
+блоки для отрисовки вертикальной шкалы
+157 - solid block
+158 - solid block
+159 - solid block
+161 - solid block
+162 - solid block
+
+рисуют мигающее сердечко в правом верхнем углу
+133 - ICON_ELLIPSIS
+134 - ICON_HEART_OPEN
+135 - ICON_HEART_FILLED
+189 - ICON_BLOCK_FILLED
+
