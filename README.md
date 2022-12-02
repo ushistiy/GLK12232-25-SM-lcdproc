@@ -3,7 +3,7 @@ LCD GLK12232-25-SM with lcdproc patches on Gentoo.
 
 Русская кириллица ASCII Windows 1251.
 
-#### Build:
+#### Build lcdproc:
 
 Put patches to directory /etc/portage/app-misc/lcdproc/
 
