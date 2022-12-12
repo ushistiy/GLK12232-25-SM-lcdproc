@@ -25,6 +25,19 @@ Add to /etc/portage/make.conf
 lcd_devices="glk"
 ```
 
+Set COM port (in BIOS) and LCD speed to 115200 baud
+```
+echo -n -e \xfe\x39\x8A > /dev/ttyS1
+
+Speed Value Speed
+20 Hex 9600 baud
+0F Hex 19200 baud
+95 Hex 57600 baud
+03 Hex 76800 baud
+8A Hex 115000 baud
+
+```
+
 And run
 
 ```
