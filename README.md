@@ -25,7 +25,7 @@ Add to /etc/portage/make.conf
 lcd_devices="glk"
 ```
 
-Set RS232 port (in BIOS) and LCD speed to 115200 baud
+Set RS232 port (in BIOS) and LCD speed to 115200 baud (More information in GLK12232-25-SM User Manual)
 ```
 echo -n -e \xfe\x39\x8A > /dev/ttyS1
 
