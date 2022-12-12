@@ -27,9 +27,9 @@ lcd_devices="glk"
 
 Set RS232 port (in BIOS) and LCD speed to 115200 baud
 ```
-echo -n -e \xfe\x39\x8A > /dev/ttyS1
+echo -n -e \xfe\x39\##x8A > /dev/ttyS1
 
-Speed Value Speed
+Speed Value
 20 Hex 9600 baud
 0F Hex 19200 baud
 95 Hex 57600 baud
