@@ -34,7 +34,7 @@ Speed Value (last byte)
 0F Hex 19200 baud
 95 Hex 57600 baud
 03 Hex 76800 baud
-8A Hex 115000 baud
+8A Hex 115200 baud
 ```
 
 And run
