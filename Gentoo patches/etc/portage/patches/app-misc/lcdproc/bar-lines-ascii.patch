@@ -1,14 +1,5 @@
 --- /server/drivers/glk.c	2021-12-20 23:19:25.000000000 +0300
 +++ /server/drivers/glk.c	2022-12-02 22:13:06.000000000 +0300
-@@ -475,7 +475,7 @@
- 		glkputl(p->fd, GLKCommand, 0x31, 1, EOF);
- 		p->fontselected = 1;
- 		/* Set font metrics */
--		glkputl(p->fd, GLKCommand, 0x32, 0, 0, 0, 1, p->height, EOF);
-+		glkputl(p->fd, GLKCommand, 0x32, 0, 0, 0, 1, p->height, EOF);
- 		/* Clear the screen */
- 		glk_clear_forced(drvthis);
- 	}
 @@ -486,10 +486,10 @@
  		myc = p->CGRAM[myc & 7];
  	} else if ((myc == 255) || (myc == -1)) {
