@@ -12,6 +12,7 @@ Use https://www.matrixorbital.com/graphic-software
 #### Build lcdproc on Gentoo:
 
 Put patches to directory /etc/portage/app-misc/lcdproc/
+Put init script lcddvc to directory /etc/init.d/
 
 Add to /etc/portage/package.use
 
@@ -25,9 +26,11 @@ Add to /etc/portage/make.conf
 lcd_devices="glk"
 ```
 
-Set RS232 port (in BIOS) and LCD display speed to 115200 baud (More information in GLK12232-25-SM User Manual)
+Set RS232 port (in BIOS) and LCD display speed to 115200 baud (More information in GLK12232-25-SM User Manual 8.1.12)
 ```
-echo -n -e "\xFE\x39\x8A" > /dev/ttyS1
+LCD display speed (254 57 [speed])
+dec 254 - hex FE
+dec 57 - hex 39
 
 Speed Value (last byte)
 20 Hex 9600 baud
@@ -35,6 +38,8 @@ Speed Value (last byte)
 95 Hex 57600 baud
 03 Hex 76800 baud
 8A Hex 115000 baud
+
+echo -n -e "\xFE\x39\x8A" > /dev/ttyS1
 ```
 
 And run
