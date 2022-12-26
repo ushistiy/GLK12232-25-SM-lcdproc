@@ -12,6 +12,7 @@ Use https://www.matrixorbital.com/graphic-software
 #### Build lcdproc on Gentoo:
 
 Put patches to directory /etc/portage/app-misc/lcdproc/
+
 Put init script lcddvc to directory /etc/init.d/
 
 Add to /etc/portage/package.use
