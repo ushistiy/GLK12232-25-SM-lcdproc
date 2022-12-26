@@ -47,3 +47,8 @@ And run
 ```
 emerge app-misc/lcdproc
 ```
+
+```
+rc-service LCDd start
+rc-service lcdproc start
+```
