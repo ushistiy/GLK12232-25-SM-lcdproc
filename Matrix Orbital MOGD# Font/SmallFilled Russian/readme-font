@@ -17,7 +17,7 @@ byte 01-14 = 536D616C6C46696C6C6564205275737369616E00 ( SmallFilled Russian. )
 byte 15    = 07 ( высота символа )
 byte 16    = 06 ( ширина символа )
 byte 17    = 20 ( первый ASCII символ  32 )
-byte 18    = FF ( последнй ASCII символ 255 )
+byte 18    = FF ( последнй ASCII символ 256 )
 
 
 Для корректной работы lcdproc с дисплеем GLK12232-25-SM примените bar-lines-ascii.patch драйвера glk 
