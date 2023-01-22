@@ -29,21 +29,23 @@ byte 18    = FF ( последнй ASCII символ 256 )
 128 - solid block
 
 блоки для плавной отрисовки горизонтальной шкалы 90% > 10%
-129 - solid block
-131 - solid block
-141 - solid block
-142 - solid block
-143 - solid block
-144 - solid block
+6 кадров анимации, в соответствии с шириной символа
+129 - block 6 pixel wide
+131 - block 5 pixel wide
+141 - block 4 pixel wide
+142 - block 3 pixel wide
+143 - block 2 pixel wide
+144 - block 1 pixel wide
 
 блоки для плавной отрисовки вертикальной шкалы 90% ^ 10%
-157 - solid block
-158 - solid block
-159 - solid block
-161 - solid block
-162 - solid block
-163 - solid block
-188 - solid block
+7 кадров анимации, в соответствии с высотой символа
+157 - block 7 pixel high
+158 - block 6 pixel high
+159 - block 5 pixel high
+161 - block 4 pixel high
+162 - block 3 pixel high
+163 - block 2 pixel high
+188 - block 1 pixel high
 
 рисуют мигающее сердечко в правом верхнем углу
 133 - ICON_ELLIPSIS
