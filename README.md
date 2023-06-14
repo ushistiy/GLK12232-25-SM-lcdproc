@@ -3,10 +3,11 @@ Matrix Orbital LCD GLK12232-25-SM with patches for lcdproc on Infoblox-1050-A.
 
 Русская кириллица ASCII Windows 1251.
 
-#### Upload font and bitmap to display:
+#### Upload font and logo to display:
 
+Use MOGD# Software
 ```
-Use https://www.matrixorbital.com/graphic-software
+https://www.matrixorbital.com/graphic-software
 ```
 
 #### Build lcdproc on Gentoo:
@@ -27,7 +28,8 @@ Add to /etc/portage/make.conf
 lcd_devices="glk"
 ```
 
-Set RS232 port (in BIOS) and LCD display speed to 115200 baud (More information in GLK12232-25-SM User Manual 8.1.12)
+#### Set RS232 port (in BIOS) and LCD display speed to 115200 baud (More information in GLK12232-25-SM User Manual 8.1.12)
+
 ```
 LCD display speed (254 57 [speed])
 dec 254 - hex FE
@@ -39,11 +41,13 @@ Speed Value (last byte)
 95 Hex 57600 baud
 03 Hex 76800 baud
 8A Hex 115000 baud
+```
 
+```
 echo -n -e "\xFE\x39\x8A" > /dev/ttyS1
 ```
 
-And run
+#### And run
 
 ```
 emerge app-misc/lcdproc
