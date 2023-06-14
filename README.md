@@ -10,24 +10,6 @@ Use MOGD# Software
 https://www.matrixorbital.com/graphic-software
 ```
 
-#### Build lcdproc on Gentoo:
-
-Put patches to directory /etc/portage/app-misc/lcdproc/
-
-Put init script lcddvc to directory /etc/init.d/
-
-Add to /etc/portage/package.use
-
-```
-app-misc/lcdproc menu
-```
-
-Add to /etc/portage/make.conf
-
-```
-lcd_devices="glk"
-```
-
 #### Set RS232 port (in BIOS) and LCD display speed to 115200 baud 
 
 Information from GLK12232-25-SM User Manual 8.1.12
@@ -48,7 +30,22 @@ To set 115000 baud rate, run command
 echo -n -e "\xFE\x39\x8A" > /dev/ttyS1
 ```
 
-#### Build
+#### Build lcdproc on Gentoo:
+
+Put patches to directory /etc/portage/app-misc/lcdproc/
+Put init script lcddvc to directory /etc/init.d/
+
+Add to /etc/portage/package.use
+```
+app-misc/lcdproc menu
+```
+
+Add to /etc/portage/make.conf
+```
+lcd_devices="glk"
+```
+
+Run command
 ```
 emerge app-misc/lcdproc
 ```
