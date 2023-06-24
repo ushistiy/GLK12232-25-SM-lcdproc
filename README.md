@@ -33,6 +33,7 @@ echo -n -e "\xFE\x39\x8A" > /dev/ttyS1
 #### Build lcdproc on Gentoo:
 
 Put patches to directory /etc/portage/app-misc/lcdproc/
+
 Put init script lcddvc to directory /etc/init.d/
 
 Add to /etc/portage/package.use
