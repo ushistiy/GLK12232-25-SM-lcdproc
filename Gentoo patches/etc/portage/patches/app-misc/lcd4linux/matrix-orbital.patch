@@ -1,0 +1,129 @@
+--- /drv_MatrixOrbital.c	2018-04-05 01:29:12.000000000 +0300
++++ /drv_MatrixOrbital.c	2023-07-03 10:39:33.000000000 +0300
+@@ -88,10 +88,11 @@
+     {0x0d, "VFD4021", 2, 40, 0, 1, 1},
+     {0x0e, "VK202-25", 2, 20, 0, 1, 1},
+     {0x0f, "VK204-25", 4, 20, 0, 1, 1},
+-    {0x10, "GLC12232", -1, -1, 0, 1, 1},
+-    {0x13, "GLC24064", -1, -1, 0, 1, 1},
+-    {0x15, "GLK24064-25", -1, -1, 0, 1, 1},
+-    {0x22, "GLK12232-25", -1, -1, 0, 1, 1},
++    {0x10, "GLC12232", 32, 122, 0, 1, 1},
++    {0x13, "GLC24064", 64, 240, 0, 1, 1},
++    {0x15, "GLK24064-25", 64, 240, 0, 1, 1},
++    {0x22, "GLK12232-25", 32, 122, 0, 1, 1},
++    {0x24, "GLK12232-25-SM", 32, 122, 0, 1, 1},
+     {0x31, "LK404-AT", 4, 40, 8, 8, 2},
+     {0x32, "VFD1621", 2, 16, 0, 1, 1},
+     {0x33, "LK402-12", 2, 40, 8, 8, 2},
+@@ -511,8 +512,8 @@
+     info("%s: %s", Name, "$Rev: 1150 $");
+ 
+     /* display preferences */
+-    XRES = 5;			/* pixel width of one char  */
+-    YRES = 8;			/* pixel height of one char  */
++    XRES = 6;			/* pixel width of one char  */
++    YRES = 7;			/* pixel height of one char  */
+     CHARS = 8;			/* number of user-defineable characters */
+     CHAR0 = 0;			/* ASCII of first user-defineable char */
+     GOTO_COST = 4;		/* number of bytes a goto command requires */
+--- /lcd4linux.conf.sample	2018-04-05 01:29:12.000000000 +0300
++++ /lcd4linux.conf.sample	2023-07-03 10:19:57.000000000 +0300
+@@ -76,6 +76,18 @@
+     Brightness 255
+ }
+ 
++Display GLK12232-25-SM {
++    Driver    'MatrixOrbital'
++    Model     'GLK12232-25-SM'
++    Port      '/dev/ttyS1'
++    Speed     115200
++    Contrast  120
++    Backlight 255
++    Size      '122x32'
++    Icons     0
++
++}
++
+ Display ABP08-16x3 {
+     Driver  'LW_ABP'
+     Port '/dev/tts/0'
+@@ -1317,49 +1329,49 @@
+ }
+ 
+ 
+-
+-Display 'ACool'
+-#Display 'SerDispLib'
++#Display 'ACool'
++#Display 'BA63'
++#Display 'BWCT'
++#Display 'CF631'
++#Display 'CF632'
++#Display 'CF633'
++#Display 'CT20x4'
++#Display 'CW12232'
++#Display 'Curses'
++#Display 'FutabaVFD'
++#Display 'GLCD2USB'
++Display 'GLK12232-25-SM'
++#Display 'HD44780-4bit'
++#Display 'HD44780-WinAmp'
++#Display 'HD44780-generic'
++#Display 'IRLCD'
++#Display 'Image'
+ #Display 'LCD-Linux'
+ #Display 'LCD2041'
++#Display 'LCD2USB'
++#Display 'LCDTerm'
++#Display 'LCM-162'
+ #Display 'LK202'
+ #Display 'LK204'
++#Display 'LPH7508'
++#Display 'LPH7508-serdisplib'
++#Display 'M50530-24x8'
+ #Display 'MI240'
+-#Display 'CW12232'
+ #Display 'NULL'
+-#Display 'HD44780-generic'
+-#Display 'HD44780-WinAmp'
+-#Display 'HD44780-4bit'
+-#Display 'WDC2704M'
+ #Display 'SC1602D'
+-#Display 'LCM-162'
+-#Display 'CF631'
+-#Display 'CF632'
+-#Display 'CF633'
+-#Display 'Curses'
+-#Display 'M50530-24x8'
+-#Display 'LCDTerm'
++#Display 'SerDispLib'
+ #Display 'SimpleLCD'
+-#Display 'BA63'
+-#Display 'CT20x4'
+-#Display 'T6963-240x64'
+ #Display 'T6963-240x128'
+ #Display 'T6963-240x128D'
+-#Display 'XWindow'
+-#Display 'IRLCD'
+-#Display 'USBLCD'
+-#Display 'BWCT'
+-#Display 'Image'
++#Display 'T6963-240x64'
+ #Display 'TeakLCD'
+ #Display 'Trefon'
+-#Display 'LCD2USB'
+-#Display 'LPH7508-serdisplib'
+-#Display 'LPH7508'
++#Display 'USBLCD'
++#Display 'VNC'
++#Display 'WDC2704M'
++#Display 'XWindow'
+ #Display 'ctinclud'
+ #Display 'picoLCD'
+-#Display 'VNC'
+-#Display 'FutabaVFD'
+-#Display 'GLCD2USB'
+ 
+ #Layout 'Default'
+ Layout 'TestLayer'
