@@ -26,6 +26,7 @@ Speed Value (last byte)
 8A Hex 115000 baud
 ```
 To set 115000 baud rate, run command
+
 Terminal
 ```
 echo -n -e "\xFE\x39\x8A" > /dev/ttyS1
