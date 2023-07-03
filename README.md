@@ -29,6 +29,10 @@ To set 115000 baud rate, run command
 ```
 echo -n -e "\xFE\x39\x8A" > /dev/ttyS1
 ```
+Or Termite
+```    
+0xFE398A
+```
 
 #### Build lcdproc on Gentoo:
 
